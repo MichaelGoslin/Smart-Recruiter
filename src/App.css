@@ -25,6 +25,8 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
+/* ... leave the rest of your CSS exactly as it is ... */
+
 
 .app-container {
   max-width: 1400px;
