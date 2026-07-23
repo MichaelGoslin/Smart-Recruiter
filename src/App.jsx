@@ -50,22 +50,22 @@ const INITIAL_INTERVIEWS = [
 
 export default function App() {
   const [candidates, setCandidates] = useState(() => {
-    const local = localStorage.getItem('rc_candidates');
+    const local = localStorage.getItem('smart_recruiter_candidates');
     return local ? JSON.parse(local) : INITIAL_CANDIDATES;
   });
   const [interviewers] = useState(INITIAL_INTERVIEWERS);
   const [availability] = useState(INITIAL_AVAILABILITY);
   const [interviews, setInterviews] = useState(() => {
-    const local = localStorage.getItem('rc_interviews');
+    const local = localStorage.getItem('smart_recruiter_interviews');
     return local ? JSON.parse(local) : INITIAL_INTERVIEWS;
   });
 
   useEffect(() => {
-    localStorage.setItem('rc_candidates', JSON.stringify(candidates));
+    localStorage.setItem('smart_recruiter_candidates', JSON.stringify(candidates));
   }, [candidates]);
 
   useEffect(() => {
-    localStorage.setItem('rc_interviews', JSON.stringify(interviews));
+    localStorage.setItem('smart_recruiter_interviews', JSON.stringify(interviews));
   }, [interviews]);
 
   const handleScheduleSubmit = ({ candidateId, interviewerId, startTime, endTime }) => {
