@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Dashboard from './Dashboard';
-import ScheduleForm from './ScheduleForm';
-import AvailabilityViewer from './AvailabilityViewer';
+import Dashboard from './dashboard';
+import ScheduleForm from './scheduleform';
+import AvailabilityViewer from './availabilityviewer';
 import './App.css';
 
 const INITIAL_CANDIDATES = [
